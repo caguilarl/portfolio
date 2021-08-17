@@ -1,1 +1,0 @@
-Xcopy C:\Proyectos\portfolio_cl C:\xampp\htdocs\portfolio_cl /E /H /C /I
