@@ -11,3 +11,11 @@
     transform: scale(1.8);
 }
 
+#nprogress .bar{
+    background-color: #F0DB4F !important;
+}
+
+#nprogress .spinner-icon{
+    border-top-color: #F0DB4F !important;
+    border-left-color: #f0db4f !important;;
+}

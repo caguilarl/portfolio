@@ -7,7 +7,7 @@ const Index = () => (
         {/**Header Card**/}
         <header>
             <div className="col-md-12">
-                <div className="card card-body bg-secundary text-dark">
+                <div className="card card-body bg-dark text-light">
                     <div className="row">
                         <div className="col-md-4">
                             <img src="profile.jpg" alt="profile" className="img-fluid" height="auto" />
@@ -16,8 +16,13 @@ const Index = () => (
                             <h1>Carlos Aguilar León</h1>
                             <h3>Software Developer - Software Engineer</h3>
                             <p>
-                                Hola! Soy Carlos, un Ingeniero en Informática de Chile. Me especializo en el desarrollo de software utilizando diferentes lenguajes y frameworks de programación.
+                            Especialista en desarrollo de software con tecnologías Microsoft como .NET Framework, SQL Server y C#.NET. También comencé a utilizar algunos frameworks y librerías de Javascript como JQuery, React, React Native y NodeJS.                            
                             </p>
+                            {
+                            /*
+                            <p>Specialist in software development with Microsoft technologies like .NET Framework, SQL Server and C#.NET . Also, I beggining to use Javascript frameworks and libraries like JQuery, React, React Native and NodeJS.</p>
+                            */
+                            }
                             <a href="/contacto">Contactame aquí</a>
                         </div>
 
@@ -71,9 +76,6 @@ const Index = () => (
                                 </li>
                             ))}
                         </ul>
-
-
-
                     </div>
 
                 </div>
@@ -93,7 +95,7 @@ const Index = () => (
                         {projects.map(({ title, subtitle, description, image }, i) => (
                             <div className="col-md-4 p-2" key={i}>
                                 <div className="card h-100">
-                                    <div className="overflow">
+                                    <div className="overflow p-1">
                                         <img src={`/${image}`} alt="" className="card-img-top" />
                                     </div>
                                     <div className="card-body">
@@ -116,7 +118,7 @@ const Index = () => (
 
 
                 </div>
-                
+
             </div>
         </div>
     </Layout>
