@@ -23,7 +23,9 @@ const Index = () => (
                             <p>Specialist in software development with Microsoft technologies like .NET Framework, SQL Server and C#.NET . Also, I beggining to use Javascript frameworks and libraries like JQuery, React, React Native and NodeJS.</p>
                             */
                             }
-                            <a href="/contacto">Contactame aquí</a>
+                            <Link href="/Contact">
+                                <a href="/contacto" className="btn btn-outline-light">Contactame aquí</a>
+                            </Link>                            
                         </div>
 
                     </div>
@@ -111,7 +113,7 @@ const Index = () => (
 
                     <div className="text-center mt-4">
                         <Link href="/portfolio">
-                            <a className="btn btn-outline-light">More Projects</a>
+                            <a className="btn btn-outline-light">Más Proyectos</a>
                         </Link>
 
                     </div>

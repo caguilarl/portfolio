@@ -62,6 +62,27 @@ export const skillGroups = [
             ]
         },
         {
+            "group": "Databases",
+            "skills": [
+                {
+                    "skill": "Microsoft SQL Server",
+                    "percentage": 80
+                },
+                {
+                    "skill": "Transact-SQL / PL-SQL",
+                    "percentage": 80
+                },
+                {
+                    "skill": "Oracle 10g",
+                    "percentage": 40
+                },
+                {
+                    "skill": "MySQL / MariaDB",
+                    "percentage": 60
+                }
+            ]
+        },
+        {
             "group": "Editor, IDEs & Tools",
             "skills": [
                 {
@@ -87,35 +108,6 @@ export const skillGroups = [
                 {
                     "skill": "Git",
                     "percentage": 70
-                },
-            ]
-        },
-        {
-            "group": "Databases",
-            "skills": [
-                {
-                    "skill": "Microsoft SQL Server",
-                    "percentage": 80
-                },
-                {
-                    "skill": "Transact-SQL",
-                    "percentage": 80
-                },
-                {
-                    "skill": "Oracle 10g",
-                    "percentage": 40
-                },
-                {
-                    "skill": "PL-SQL",
-                    "percentage": 80
-                },
-                {
-                    "skill": "MySQL",
-                    "percentage": 60
-                },
-                {
-                    "skill": "MariaDB",
-                    "percentage": 60
                 },
             ]
         }                

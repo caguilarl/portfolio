@@ -4,7 +4,7 @@ import { useRouter } from "next/dist/client/router";
 import nProgress from "nprogress";
 import Classnames from "classnames";
 
-const Layout = ({children, useFooter = true, useDarkBg = false, title}) => {
+const Layout = ({children, useFooter = true, useDarkBg = false, title, page = ""}) => {
 
     const router = useRouter();
 
@@ -25,7 +25,7 @@ const Layout = ({children, useFooter = true, useDarkBg = false, title}) => {
 
     return (
         <div className={Classnames({'bg-dark': useDarkBg, 'bg-light': !useDarkBg})}>
-            <Navbar />
+            <Navbar page={page} />
             <main className="container py-4">
                 {title && (
                     <h1 className={Classnames('text-center',{'text-light': useDarkBg})}>{title}</h1>

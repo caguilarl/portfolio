@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Link from "next/dist/client/link";
 
 const About = () => (
     <Layout>
@@ -23,7 +24,9 @@ const About = () => (
                             <p>
                                 En este sitio podrás encontrar un portafolio de mis proyectos desarrollados y algunos productos y servicios que tengo para ofrecer, además de algunas publicaciones en el blog sobre temas de mi interés
                             </p>
-                            <a href="/contacto">Contactame aquí</a>
+                            <Link href="/Contact">
+                                <a className="btn btn-outline-dark">Contactame aquí</a>
+                            </Link>                            
                         </div>
 
                     </div>

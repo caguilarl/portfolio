@@ -15,7 +15,7 @@ const Post = ({ post }) => {
                     <p>
                         {post.content}
                     </p>
-                    <Link href={`/Post?title=${post.title}`}> 
+                    <Link href={`/Post?title=${post.title}`} as={`/post/${post.title}`}> 
                         <button className="btn btn-light">
                             Read
                         </button>
