@@ -1,9 +1,12 @@
 import Navbar from "./Navbar";
 import { useEffect } from "react";
-import { Router, useRouter } from "next/dist/client/router";
+import { useRouter } from "next/dist/client/router";
 import nProgress from "nprogress";
+import Classnames from "classnames";
 
-const Layout = (props) => {
+const Layout = ({children, useFooter = true, useDarkBg = false, title}) => {
+
+    const router = useRouter();
 
     useEffect(()=>{
         const handleRouteChange = url => {
@@ -11,29 +14,36 @@ const Layout = (props) => {
             nProgress.start();
         };
 
-        Router.events.on('routeChangeStart', handleRouteChange);
+        router.events.on('routeChangeStart', handleRouteChange);
 
-        nProgress.done();
+        router.events.on('routeChangeComplete', () => nProgress.done());        
         return () => {
-            Router.events.off('routeChangeStart', handleRouteChange);
+            router.events.off('routeChangeStart', handleRouteChange);
         }
 
     },[])
 
     return (
-        <>
+        <div className={Classnames({'bg-dark': useDarkBg, 'bg-light': !useDarkBg})}>
             <Navbar />
             <main className="container py-4">
-                {props.children}
+                {title && (
+                    <h1 className={Classnames('text-center',{'text-light': useDarkBg})}>{title}</h1>
+                )}
+                {children}
             </main>
-            <footer className="bg-dark text-light text-center">
-                <div className="container p-4">
-                    <h3>&copy; Carlos Aguilar León</h3>
-                    <p>2009 - {new Date().getFullYear()}</p>
-                    <p>All rights Reserved.</p>
-                </div>
-            </footer>
-        </>)
+            {
+                useFooter && (
+                    <footer className="bg-dark text-light text-center">
+                    <div className="container p-4">
+                        <h3>&copy; Carlos Aguilar León</h3>
+                        <p>2009 - {new Date().getFullYear()}</p>
+                        <p>All rights Reserved.</p>
+                    </div>
+                </footer>
+                )
+            }            
+        </div>)
 }
 
 export default Layout;
